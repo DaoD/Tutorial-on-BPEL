@@ -1,20 +1,27 @@
 ## Introduction
 
-This tutorial is talking about deploying BPEL process on Apache ODE.
+This tutorial focuses on deploying BPEL process on Apache ODE.
 
-BPEL, business process execution language, which was written in XML. It is used to automatic process execution, and also known as WSBPEL and BPEL4WS. More information please move to [BPEL-Wikipedia](https://en.wikipedia.org/wiki/Business_Process_Execution_Language).
+BPEL, business process execution language, which was written in XML. It is used to automatic process execution, and also known as WSBPEL and BPEL4WS. For more details see [BPEL-Wikipedia](https://en.wikipedia.org/wiki/Business_Process_Execution_Language).
 
 In this tutorial, we need these tools:
 - Eclipse for JAVA EE ([Eclipse neon](https://www.eclipse.org/downloads/) and MyEclipse xxx has passed testing, other version maybe work or not.)
+- [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
 - [Apache Tomcat](http://tomcat.apache.org) (8.0 or 8.5)
 - [Apache ODE](http://ode.apache.org/getting-ode.html)
 
+OK, here we go.
 
-You can use the [editor on GitHub](https://github.com/DaoD/yutao.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Tutorial
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Install Eclipse BPEL plug-in
 
-### Markdown
+### Install Apache ODE and add it in Eclipse
+
+### Create BPEL project in Eclipse
+
+
+
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
@@ -36,12 +43,4 @@ Syntax highlighted code block
 [Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/DaoD/yutao.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
