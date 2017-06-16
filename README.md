@@ -1,6 +1,13 @@
 ## Introduction
 
-This tutorial is designd for deploying BPEL process on Apache ODE.
+This tutorial is talking about deploying BPEL process on Apache ODE.
+
+BPEL, business process execution language, which was written in XML. It is used to automatic process execution, and also known as WSBPEL and BPEL4WS. More information please move to [BPEL-Wikipedia](https://en.wikipedia.org/wiki/Business_Process_Execution_Language).
+
+In this tutorial, we need these tools:
+- Eclipse for JAVA EE ([Eclipse neon](https://www.eclipse.org/downloads/) and MyEclipse xxx has passed testing, other version maybe work or not.)
+- [Apache Tomcat](http://tomcat.apache.org) (8.0 or 8.5)
+- [Apache ODE](http://ode.apache.org/getting-ode.html)
 
 
 You can use the [editor on GitHub](https://github.com/DaoD/yutao.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
