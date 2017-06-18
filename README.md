@@ -22,7 +22,7 @@ First in first, download the Eclipse Java EE, JDK and install it. There are many
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/3.PNG)
 
-Choose "Tomcat v8.5 Server" and click "Next", Click "Browse..." and choose the Tomcat directory you have created in the first step. And "Next"... "Finish".
+Choose "Tomcat v8.5 Server" and click "Next", Click "Browse..." and choose the Tomcat directory we have created in the first step. And "Next"... "Finish".
 
 ### Install Eclipse BPEL plug-in
 Open Eclipse, Click the "Help"-"Install New Software...", input "http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/bpel/site/1.0.5/", and then choose "Eclipse BPEL Designer" and click "Next"..."Accpet xxx" and "Finish".
@@ -67,11 +67,11 @@ Click "User Entries", then "Add External JARs..." and choose the "Tomcat/bin/tom
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/11.PNG)
 
-- In the project we have created, right click the "bpelContent" and choose "New"-"Other", and select "BPEL Process File". Input the process name and namespace.
+- In the project we have created, right click the "bpelContent" and choose "New"-"Other", and select "BPEL Process File". Input the process name and namespace. Here exsits a small bug, we need to set the namespace as the service we invoke. Otherwise, may be an error occured.
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/12.PNG)
 
-In "Template", select "Synchronous BPEL Process" and modify the "Service Address" like "http://localhost:8080/ode/processes/[yourProject]". "Next" and "Finish".
+- In "Template", select "Synchronous BPEL Process" and modify the "Service Address" like "http://localhost:8080/ode/processes/[yourProject]". "Next" and "Finish".
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/13.PNG)
 
@@ -92,9 +92,52 @@ After finish the former step, we have created a BPEL project. In this part, we f
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/17.PNG)
 
-- Click "Add WSDL", choose "URL" and input the WSDL address of your service.
+- Click "Add WSDL", choose "URL" and input the WSDL address of our service. Choose the service in the WSDL which we want to invoke. Then input the name and role name. "Finish".
 
+![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/18.PNG)
+![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/19.PNG)
 
+- In the properties-detail window, pick the function we want to invoke in the right side "Quick Pick". Double click it and it will create input variable and output variable automaticlly. This step defines which service we want to use.
+
+![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/20.PNG)
+
+- Click the first assign module. In the properties-detail window, click "New" and choose From and To respectively. 
+
+![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/21.PNG)
+
+After this, Eclipse will prompt if you need a initializer for these assignments. Choose Yes.
+
+![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/22.PNG)
+
+In this step we assign the BPEL input to the parameters of the function we invoke. But be careful, sometimes the Eclipse will not generate initializer automatically although we choose "yes". Under this circumstance, we need to initialize it manually. Just write the xml like the picture. Choose "Fixed Value" and write "ns:<functionname> and ns:<parametername>". And click parameters under the Request in the To variable window. It means use the fixed value to initialize the parameters.
+
+- Click the second assign module. And do the same things as before. But pay attention to the From and To. This time we assign the response to output. And a initializer is essential like the former step.
+
+![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/23.PNG)
+
+- Click the "xxxxxArtifacts.wsdl", this file is generated automatically by Eclipse. Open it and click "Source". Move down to the tail. And modify the soap:address location. This address is the same as we input in service address. It is an easy way to deploy BPEL in ode because we write /ode/processes/[yourProject] here.
+
+![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/24.PNG)
+
+- After these steps, our BPEL process finished. Then we need to deploy it. Right click the bpelContent and choose "New"-"Other", choose "BPEL Deployment Descriptor" here and "Finish".
+
+![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/25.PNG)
+
+- In the deploy.xml, choose client "Associated port", this is the BPEL port itself. And choose partner link "Associated port", this point to which soap port we invoke the service. After selection, do not forget save it.
+
+![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/26.PNG)
+
+- We have finish all of the BPEL process. And let's test it now. Right click Ode server in the Server window, choose "Add and Remove...". Choose the project we have created and add it into the server, then click "OK".
+
+![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/27.PNG)
+
+- Then we test the BPEL process. Right click the "xxxxxArtifacts.wsdl" and "Web Services"-"Test with Web Services Explorer". Click the "process" and input the value we want to test.
+
+![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/28.PNG)
+
+- If everything worked successfully, we will get the result.
+
+### Test BPEL by Java
 
 
 
