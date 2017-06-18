@@ -5,7 +5,7 @@ This tutorial focuses on deploying BPEL process on Apache ODE.
 BPEL, business process execution language, which was written in XML. It is used to automatic process execution, and also known as WSBPEL and BPEL4WS. For more details see [BPEL-Wikipedia](https://en.wikipedia.org/wiki/Business_Process_Execution_Language).
 
 In this tutorial, we need these tools:
-- Eclipse for JAVA EE ([Eclipse neon](https://www.eclipse.org/downloads/) and MyEclipse xxx has passed testing, other version maybe work or not.)
+- Eclipse for JAVA EE ([Eclipse neon](https://www.eclipse.org/downloads/) and MyEclipse 2017 CI 1 has passed testing, other version maybe work or not.)
 - [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
 - [Apache Tomcat](http://tomcat.apache.org) (8.0 or 8.5)
 - [Apache ODE](http://ode.apache.org/getting-ode.html)
@@ -136,7 +136,7 @@ In this step we assign the BPEL input to the parameters of the function we invok
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/28.PNG)
 
-- If everything works successfully, we will get the result.
+- If everything works successfully, we will get the result. Hint: If you invoke more than one service(import more than one WSDL) in one BPEL, Eclipse will prompt "Duplicate key value declared for identity constraint import of element definitions" error, it doesn't matter and I guess there is something wrong in Eclipse BPEL code check system. Besides, if the service you invoke in the WSDL doesn't have a return value, it will prompt another problem. Just ignore it :)
 
 ### Test BPEL by Java
 We can also test the BPEL process by Java. In fact, it is the same way to invoke a wsdl process.
