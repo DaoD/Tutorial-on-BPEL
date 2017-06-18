@@ -163,7 +163,6 @@ import org.apache.axis2.rpc.client.RPCServiceClient;
 OMElement result = null;  
 try {  
     String url = "http://localhost:8080/ode/processes/BPELSayHello?wsdl"; //BPEL or WSDL address
-
     Options options = new Options();   
     EndpointReference targetEPR = new EndpointReference(url);  
     options.setTo(targetEPR);  
