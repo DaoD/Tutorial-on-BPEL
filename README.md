@@ -17,8 +17,8 @@ OK, here we go.
 First in first, download the Eclipse Java EE, JDK and install it. There are many instruction about this, so ignore it here.
 
 ### Install Tomcat and add it in Eclipse
-1. Download the Tomcat and unzip it. Open Eclipse, Click "Window"-"Show View"-"Servers".
-2. Right click in the Server window and choose "New"-"Server". 
+- Download the Tomcat and unzip it. Open Eclipse, Click "Window"-"Show View"-"Servers".
+- Right click in the Server window and choose "New"-"Server". 
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/3.PNG)
 
@@ -30,23 +30,23 @@ Open Eclipse, Click the "Help"-"Install New Software...", input "http://www.mirr
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/1.PNG)
 
 ### Install Apache ODE and add it in Eclipse
-1. Download Apache ODE from [Link](http://ode.apache.org/getting-ode.html) and choose "apache-ode-war-1.3.6.zip".
+- Download Apache ODE from [Link](http://ode.apache.org/getting-ode.html) and choose "apache-ode-war-1.3.6.zip".
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/2.PNG)
 
-2. Unzip the file and copy ode.war into Tomcat/webapps directory and restart the Tomcat. Open the site "http://localhost:8080/ode/" to check if the ode have been successfully deployed. If you see like the picture below, it means finished.
+- Unzip the file and copy ode.war into Tomcat/webapps directory and restart the Tomcat. Open the site "http://localhost:8080/ode/" to check if the ode have been successfully deployed. If you see like the picture below, it means finished.
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/4.PNG)
 
-3. Open Eclipse, right click in the Server window and choose "New"-"Server". And this time we choose "Ode v1.x Server" and click "Next".
+- Open Eclipse, right click in the Server window and choose "New"-"Server". And this time we choose "Ode v1.x Server" and click "Next".
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/5.PNG)
 
-4. Choose the directory of ODE(xxx/Tomcat/webapps/ode) and Tomcat(xxx/Tomcat). And click "Next"..."Finish".
+- Choose the directory of ODE(xxx/Tomcat/webapps/ode) and Tomcat(xxx/Tomcat). And click "Next"..."Finish".
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/6.PNG)
 
-5. Double click the Ode server we have added in the Servers window. 
+- Double click the Ode server we have added in the Servers window. 
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/7.PNG)
 
@@ -59,15 +59,15 @@ Click "User Entries", then "Add External JARs..." and choose the "Tomcat/bin/tom
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/9.PNG)
 
 ### Create BPEL project in Eclipse
-1. Open Eclipse, click "File"-"New"-"Other". Find "BPEL 2.0" and choose "BPEL Project".
+- Open Eclipse, click "File"-"New"-"Other". Find "BPEL 2.0" and choose "BPEL Project".
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/10.PNG)
 
-2. In "Target runtime", choose "Apache Ode 1.x Runtime". Then "Next", "Finish".
+- In "Target runtime", choose "Apache Ode 1.x Runtime". Then "Next", "Finish".
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/11.PNG)
 
-3. In the project we have created, right click the "bpelContent" and choose "New"-"Other", and select "BPEL Process File". Input the process name and namespace.
+- In the project we have created, right click the "bpelContent" and choose "New"-"Other", and select "BPEL Process File". Input the process name and namespace.
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/12.PNG)
 
@@ -80,19 +80,19 @@ After finish the former step, we have created a BPEL project. In this part, we f
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/14.PNG)
 
-1.Click the "FIX_ME-Add_Business_Logic_Here" and delete it. Then drag two "Assign" and one "Invoke" module into the process between "receiveInput" and "replyOutput".
+- Click the "FIX_ME-Add_Business_Logic_Here" and delete it. Then drag two "Assign" and one "Invoke" module into the process between "receiveInput" and "replyOutput".
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/15.PNG)
 
-2.Click the "Invoke" and choose "Properties"-"Details". Double click "Create Global Partner Link".
+- Click the "Invoke" and choose "Properties"-"Details". Double click "Create Global Partner Link".
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/16.PNG)
 
-3.Input a partner link name. Then "OK".
+- Input a partner link name. Then "OK".
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/17.PNG)
 
-4.Click "Add WSDL", choose "URL" and input the WSDL address of your service.
+- Click "Add WSDL", choose "URL" and input the WSDL address of your service.
 
 
 
