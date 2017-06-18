@@ -138,10 +138,21 @@ In this step we assign the BPEL input to the parameters of the function we invok
 - If everything worked successfully, we will get the result.
 
 ### Test BPEL by Java
+We can also test the BPEL process by Java. In fact, it is the same way to invoke a wsdl process.
 
-
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+```markdown
+import javax.xml.namespace.QName;  
+import org.apache.axiom.om.OMAbstractFactory;  
+import org.apache.axiom.om.OMElement;  
+import org.apache.axiom.om.OMFactory;  
+import org.apache.axiom.om.OMNamespace;
+import org.apache.axiom.om.OMNode;
+import org.apache.axis2.AxisFault;  
+import org.apache.axis2.addressing.EndpointReference;  
+import org.apache.axis2.client.Options;  
+import org.apache.axis2.client.ServiceClient;  
+import org.apache.axis2.rpc.client.RPCServiceClient;
+```
 
 ```markdown
 Syntax highlighted code block
