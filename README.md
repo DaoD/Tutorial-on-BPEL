@@ -25,7 +25,7 @@ First in first, download the Eclipse Java EE, JDK and install it. There are many
 Choose "Tomcat v8.5 Server" and click "Next", Click "Browse..." and choose the Tomcat directory you have created in the first step. And "Next"... "Finish".
 
 ### Install Eclipse BPEL plug-in
-Open Eclipse, Click the "Help"-"Install New Software...", input "bpel.site - http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/bpel/site/1.0.5/", and then choose "Eclipse BPEL Designer" and click "Next"..."Accpet xxx" and "Finish".
+Open Eclipse, Click the "Help"-"Install New Software...", input "http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/bpel/site/1.0.5/", and then choose "Eclipse BPEL Designer" and click "Next"..."Accpet xxx" and "Finish".
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/1.PNG)
 
@@ -80,19 +80,19 @@ After finish the former step, we have created a BPEL project. In this part, we f
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/14.PNG)
 
-1. Click the "FIX_ME-Add_Business_Logic_Here" and delete it. Then drag two "Assign" and one "Invoke" module into the process between "receiveInput" and "replyOutput".
+1.Click the "FIX_ME-Add_Business_Logic_Here" and delete it. Then drag two "Assign" and one "Invoke" module into the process between "receiveInput" and "replyOutput".
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/15.PNG)
 
-2. Click the "Invoke" and choose "Properties"-"Details". Double click "Create Global Partner Link".
+2.Click the "Invoke" and choose "Properties"-"Details". Double click "Create Global Partner Link".
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/16.PNG)
 
-3. Input a partner link name. Then "OK".
+3.Input a partner link name. Then "OK".
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/17.PNG)
 
-4. Click "Add WSDL", choose "URL" and input the WSDL address of your service.
+4.Click "Add WSDL", choose "URL" and input the WSDL address of your service.
 
 
 
