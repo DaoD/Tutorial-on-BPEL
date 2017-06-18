@@ -19,7 +19,9 @@ First in first, download the Eclipse Java EE, JDK and install it. There are many
 ### Install Tomcat and add it in Eclipse
 1. Download the Tomcat and unzip it. Open Eclipse, Click "Window"-"Show View"-"Servers".
 2. Right click in the Server window and choose "New"-"Server". 
+
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/blob/master/images/3.PNG)
+
 Choose "Tomcat v8.5 Server" and click "Next", Click "Browse..." and choose the Tomcat directory you have created in the first step. And "Next"... "Finish".
 
 ### Install Eclipse BPEL plug-in
@@ -57,6 +59,41 @@ Click "User Entries", then "Add External JARs..." and choose the "Tomcat/bin/tom
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/blob/master/images/9.PNG)
 
 ### Create BPEL project in Eclipse
+1. Open Eclipse, click "File"-"New"-"Other". Find "BPEL 2.0" and choose "BPEL Project".
+
+![Image](https://github.com/DaoD/Tutorial-on-BPEL/blob/master/images/10.PNG)
+
+2. In "Target runtime", choose "Apache Ode 1.x Runtime". Then "Next", "Finish".
+
+![Image](https://github.com/DaoD/Tutorial-on-BPEL/blob/master/images/11.PNG)
+
+3. In the project we have created, right click the "bpelContent" and choose "New"-"Other", and select "BPEL Process File". Input the process name and namespace.
+
+![Image](https://github.com/DaoD/Tutorial-on-BPEL/blob/master/images/12.PNG)
+
+In "Template", select "Synchronous BPEL Process" and modify the "Service Address" like "http://localhost:8080/ode/processes/[yourProject]". "Next" and "Finish".
+
+![Image](https://github.com/DaoD/Tutorial-on-BPEL/blob/master/images/13.PNG)
+
+### Write a simple BPEL project
+After finish the former step, we have created a BPEL project. In this part, we focus on write a simple BPEL process.
+
+![Image](https://github.com/DaoD/Tutorial-on-BPEL/blob/master/images/14.PNG)
+
+1. Click the "FIX_ME-Add_Business_Logic_Here" and delete it. Then drag two "Assign" and one "Invoke" module into the process between "receiveInput" and "replyOutput".
+
+![Image](https://github.com/DaoD/Tutorial-on-BPEL/blob/master/images/15.PNG)
+
+2. Click the "Invoke" and choose "Properties"-"Details". Double click "Create Global Partner Link".
+
+![Image](https://github.com/DaoD/Tutorial-on-BPEL/blob/master/images/16.PNG)
+
+3. Input a partner link name. Then "OK".
+
+![Image](https://github.com/DaoD/Tutorial-on-BPEL/blob/master/images/17.PNG)
+
+4. Click "Add WSDL", choose "URL" and input the WSDL address of your service.
+
 
 
 
