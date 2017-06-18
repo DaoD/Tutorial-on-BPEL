@@ -24,6 +24,7 @@ Choose "Tomcat v8.5 Server" and click "Next", Click "Browse..." and choose the T
 
 ### Install Eclipse BPEL plug-in
 Open Eclipse, Click the "Help"-"Install New Software...", input "bpel.site - http://www.mirrorservice.org/sites/download.eclipse.org/eclipseMirror/bpel/site/1.0.5/", and then choose "Eclipse BPEL Designer" and click "Next"..."Accpet xxx" and "Finish".
+
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/blob/master/images/1.PNG)
 
 ### Install Apache ODE and add it in Eclipse
@@ -46,9 +47,11 @@ Open Eclipse, Click the "Help"-"Install New Software...", input "bpel.site - htt
 5. Double click the Ode server we have added in the Servers window. 
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/blob/master/images/7.PNG)
+
 Click "Open launch configuration" and choose "Classpath".
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/blob/master/images/8.PNG)
+
 Click "User Entries", then "Add External JARs..." and choose the "Tomcat/bin/tomcat-juli.jar" and "Open", "OK".
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/blob/master/images/9.PNG)
