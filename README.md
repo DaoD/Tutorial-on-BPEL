@@ -9,6 +9,7 @@ In this tutorial, we need these tools:
 - [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
 - [Apache Tomcat](http://tomcat.apache.org) (8.0 or 8.5)
 - [Apache ODE](http://ode.apache.org/getting-ode.html)
+- [Axis2](http://axis.apache.org/axis2/java/core/download.cgi)
 
 OK, here we go.
 
@@ -140,8 +141,9 @@ In this step we assign the BPEL input to the parameters of the function we invok
 ### Test BPEL by Java
 We can also test the BPEL process by Java. In fact, it is the same way to invoke a wsdl process.
 
+- Import relatd packages, these packages you can find in axis2/lib directory.
 ```markdown
-import javax.xml.namespace.QName;  
+`import javax.xml.namespace.QName;  
 import org.apache.axiom.om.OMAbstractFactory;  
 import org.apache.axiom.om.OMElement;  
 import org.apache.axiom.om.OMFactory;  
@@ -151,8 +153,57 @@ import org.apache.axis2.AxisFault;
 import org.apache.axis2.addressing.EndpointReference;  
 import org.apache.axis2.client.Options;  
 import org.apache.axis2.client.ServiceClient;  
-import org.apache.axis2.rpc.client.RPCServiceClient;
+import org.apache.axis2.rpc.client.RPCServiceClient;`
 ```
+
+- Invoke the BPEL or WSDL
+```markdown
+OMElement result = null;  
+try {  
+    String url = "http://localhost:8080/ode/processes/BPELSayHello?wsdl"; //BPEL or WSDL address
+
+    Options options = new Options();   
+    EndpointReference targetEPR = new EndpointReference(url);  
+    options.setTo(targetEPR);  
+
+    ServiceClient sender = new ServiceClient();  
+    sender.setOptions(options);  
+
+    OMFactory fac = OMAbstractFactory.getOMFactory();  
+    String tns = "http://fabu"; //the same as the BPEL or WSDL namespace
+
+    OMNamespace omNs = fac.createOMNamespace(tns, "");
+
+    OMElement method = fac.createOMElement("BPELSayHelloRequest", omNs); //which function you want to invoke
+
+    OMElement symbol1 = fac.createOMElement("input", omNs); //define the parameter name
+    symbol1.addChild(fac.createOMText(symbol1, "123")); //define the parameter value
+    method.addChild(symbol1);
+
+    method.build();
+    System.out.println(method);
+    result = sender.sendReceive(method);
+
+    //Get the result by loop
+    Iterator iterator =  result.getChildElements();
+    while (iterator.hasNext()) {
+      OMElement omNode = (OMElement) iterator.next();
+      Iterator iterator2 = omNode.getChildElements();
+      while(iterator2.hasNext()) {
+        OMElement omNode2 = (OMElement) iterator2.next();
+        System.out.println(omNode2.getLocalName() + ": " + omNode2.getText());
+      }
+      System.out.println();
+
+    }
+
+    System.out.println(result);  
+
+} catch (AxisFault axisFault) {  
+    axisFault.printStackTrace();  
+}  
+```
+
 
 ```markdown
 Syntax highlighted code block
