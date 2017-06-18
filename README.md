@@ -14,7 +14,10 @@ OK, here we go.
 
 ## Tutorial
 
+First in first, download the Eclipse Java EE, JDK and install it. There are many instruction about this, so ignore it here.
+
 ### Install Eclipse BPEL plug-in
+1. Open Eclipse, Click the "Help" button in the menu, and choose "Install New Software..."
 
 ### Install Apache ODE and add it in Eclipse
 
