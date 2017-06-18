@@ -157,7 +157,6 @@ import org.apache.axis2.rpc.client.RPCServiceClient;
 ```
 
 - Invoke the BPEL or WSDL.
-
 ```java
 OMElement result = null;  
 try {  
@@ -203,24 +202,3 @@ try {
     axisFault.printStackTrace();  
 }  
 ```
-
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-
