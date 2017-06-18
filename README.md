@@ -136,7 +136,7 @@ In this step we assign the BPEL input to the parameters of the function we invok
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/28.PNG)
 
-- If everything worked successfully, we will get the result.
+- If everything works successfully, we will get the result.
 
 ### Test BPEL by Java
 We can also test the BPEL process by Java. In fact, it is the same way to invoke a wsdl process.
