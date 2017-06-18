@@ -28,22 +28,29 @@ Open Eclipse, Click the "Help"-"Install New Software...", input "bpel.site - htt
 
 ### Install Apache ODE and add it in Eclipse
 1. Download Apache ODE from [Link](http://ode.apache.org/getting-ode.html) and choose "apache-ode-war-1.3.6.zip".
+
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/blob/master/images/2.PNG)
 
 2. Unzip the file and copy ode.war into Tomcat/webapps directory and restart the Tomcat. Open the site "http://localhost:8080/ode/" to check if the ode have been successfully deployed. If you see like the picture below, it means finished.
+
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/blob/master/images/4.PNG)
 
 3. Open Eclipse, right click in the Server window and choose "New"-"Server". And this time we choose "Ode v1.x Server" and click "Next".
+
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/blob/master/images/5.PNG)
 
 4. Choose the directory of ODE(xxx/Tomcat/webapps/ode) and Tomcat(xxx/Tomcat). And click "Next"..."Finish".
+
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/blob/master/images/6.PNG)
 
 5. Double click the Ode server we have added in the Servers window. 
+
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/blob/master/images/7.PNG)
 Click "Open launch configuration" and choose "Classpath".
+
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/blob/master/images/8.PNG)
 Click "User Entries", then "Add External JARs..." and choose the "Tomcat/bin/tomcat-juli.jar" and "Open", "OK".
+
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/blob/master/images/9.PNG)
 
 ### Create BPEL project in Eclipse
