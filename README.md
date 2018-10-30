@@ -43,7 +43,7 @@ Open Eclipse, and click the "Help"-"Install New Software...". Input "http://www.
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/5.PNG)
 
-- Choose the directory of ODE(xxx/Tomcat/webapps/ode) and Tomcat(xxx/Tomcat). And click "Next"..."Finish".
+- Choose the directory of ODE (xxx/Tomcat/webapps/ode) and Tomcat (xxx/Tomcat). And click "Next"..."Finish".
 
 ![Image](https://github.com/DaoD/Tutorial-on-BPEL/raw/master/images/6.PNG)
 
